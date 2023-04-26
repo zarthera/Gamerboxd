@@ -1,5 +1,6 @@
 # Gamerboxd
-Project using CSS Grid
+Project using CSS Grid. 
+
 Home page of a website that you review games on, like Letterboxd for movies!
 
 
