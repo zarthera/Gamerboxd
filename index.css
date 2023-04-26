@@ -1,12 +1,21 @@
-
 svg{
     width: 35px;
 }
-
+div, .card-title, p{
+    font-family: "Lato";
+    color: #F1F6F9;
+}
+body{
+    background-color: #212A3E;
+}
+.card-body {
+    background-color: #14181c;
+    border: 2px solid #171717
+}
 .container{
     display: grid;
     grid-template-columns: 2fr 8fr 3fr;
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-rows: 1fr 3.5fr 3fr;
     grid-template-areas: 
     "sidebar header header"
     "sidebar posts announcements"
@@ -15,12 +24,16 @@ svg{
 }
 .sidebar{
     grid-area: sidebar;
-    background-color: lightblue;
+    background-color: #394867;
     display: flex;
     flex-direction: column;
     gap: 50px;
     position: relative;
-    margin-left: -11px;
+    margin-left: -12px;
+    text-align: center;
+}
+.logo > button > svg{
+    width: 70px;
 }
 .side-content-1 .logo{
     font-weight: bold;
@@ -32,17 +45,32 @@ svg{
     padding: 16px;
     gap: 20px;
 }
-.side-content-1 > div, .side-content-2 > div{
+.dashboard-button{
     display: flex;
     gap: 26px;
     font-size: 22px;
     align-items: center;
+}
+button{
+    border: none;
+    background: #394867;
+}
+button:hover{
+    transform: scale(1.1);
+    transition: ease 0.1s all;
+}
+button:not(:hover){
+    transform: scale(.9);
+    transition: ease 0.07s all;
 }
 .header{
     grid-area: header;
     display: flex; 
     flex-direction: column;
     padding: 15px;
+}
+.profile-pic{
+    border-radius: 50%;
 }
 .header-top{
     display: grid;
@@ -63,7 +91,13 @@ svg{
 }
 .header-bottom{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 4fr 340px;
+}
+.line{
+    height: 2px;
+    background: #9BA4B5;
+    position: relative;
+    top: 10px;
 }
 .btn{
     margin: 4px
@@ -80,16 +114,43 @@ svg{
 .posting-options{
     grid-column: 2/3;
 }
+input{
+    width: 100% - 20px;
+    border-radius: 15px;
+    padding-left: 6px;
+    color: white;
+    border: none;
+}
 .search-bar{
     padding: 6px;
     border-radius: 15px;
-    border: 1px solid black;
     display: flex;
-
+    background: #394867;
+    width: 250px;
     grid-column: 1/1;    
 
 }
 
+
+.card > img{
+    height: 250px;
+    width: 250px;
+    border: 3px solid black;
+}
+.card-body{
+    text-align: center;
+}
+.checked{
+    color: #fb923c;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #9BA4B5;
+}
+.posts-title{
+    font-size: 26px;
+}
 .posts-container{
     grid-area: posts;
     padding: 15px;
@@ -104,18 +165,35 @@ svg{
     display: flex;
     flex-direction: column;
 }
+.announcements-title{   
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    position: relative;
+    left: 10px;
+}
 .announcements{
     border-radius: 25px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     padding: 16px;
-    gap: 16px;
+    gap: 30px;
 }
 .announcement{
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+.announcement > :first-child{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.trending-title{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
 }
 .trending-container{
     grid-area: trending;
@@ -125,8 +203,22 @@ svg{
 .trenders{
     display: flex;
     flex-direction: column;
+    gap: 16px;
     border-radius: 25px;
-    border: 1px solid black;
     padding-bottom: 15px;
     padding-left: 15px;
+}
+.trender{
+    padding: 6px;
+    display: flex;
+    gap: 6px;
+    width: 200px;
+    border: 2px solid #9BA4B5;
+    border-radius: 25px;
+    margin: auto;
+    
+}
+.trender > img{
+    width: 60px;
+    border-radius: 50%;
 }
